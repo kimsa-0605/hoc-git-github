@@ -1,0 +1,151 @@
+<!-- git init : Khởi tạo một thư mục hiện có dưới dạng kho lưu trữ Git
+git clone [url] : Truy xuất toàn bộ kho lưu trữ từ một vị trí được lưu trữ qua URL
+git add [file] :Thêm một tệp như hiện tại vào lần xác nhận tiếp theo của bạn (giai đoạn)
+git commit -m “[message]” : Cam kết nội dung được dàn dựng của bạn dưới dạng ảnh chụp nhanh cam kết mới
+git status: Hiển thị các tệp đã sửa đổi trong thư mục làm việc
+git branch: Liệt kê các chi nhánh của bạn ở địa phương
+git checkout: Chuyển sang chi nhánh khác
+git push [alias] [branch] : Truyền nhánh cục bộ cam kết tới kho lưu trữ từ xa 
+git merge : Hợp nhất một nhánh vào nhánh hiện tại của bạn
+git pull : Tìm nạp và hợp nhất mọi cam kết từ nhánh từ xa
+git rm [file] :Xóa tệp khỏi dự án và tiến hành xóa để xác nhận -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bài tập 2</title>
+    <style>
+        .container{
+            position:relative;
+            text-align:center;
+            border: none;  
+            border-radius: 2%;
+            background-image: radial-gradient(circle at top right,  #10ad7b ,#065983);
+            margin: 100px auto;
+            font-family: Raleway;
+            padding: 40px;
+            width: 40%;
+            color:white;
+            min-width: 300px;
+        }
+        
+
+        p{
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgb(221, 222, 154);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .name, .num{
+            display: flex;
+            gap: 5px;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+
+        .name{
+            padding-left: 10px;
+        }
+        .name-num{
+            display: grid;
+            grid-template-columns: 47.5% 47.5%;
+            column-gap: 5%;
+            box-sizing: border-box;
+
+        }
+
+        .infor{
+            display:flex;
+            padding: 10px;
+            gap: 5px;
+            border-bottom: 2px solid white;
+        }
+
+        
+        .input>input{
+            border: none;
+            padding: 0;
+            margin: 0px 20px;
+            background-color: transparent; /* Nền trong suốt, cùng màu với nền container */
+        }
+        
+        .input > input::placeholder,
+        .input > textarea::placeholder {
+            color: white; /* Đặt màu cho placeholder là màu trắng */
+            opacity: 1; /* Đảm bảo rằng placeholder có độ trong suốt đầy đủ */
+}
+        .input>textarea{
+            border: none;
+            padding: 0;
+            margin: 0;
+            width: 220%;
+            height: 80px;
+            margin: 0px 0px;
+            background-color: transparent; /* Nền trong suốt, cùng màu với nền container */
+
+        }
+
+        .input>input:focus, 
+        .input>textarea:focus{
+            outline:  none;
+        }
+
+        form {
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        .registerbtn {
+            background-color: #24da97;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border: 1px solid white;
+            cursor: pointer;
+            width: 20%;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <p>Gửi mail đến Phòng Kinh Doanh</p>
+            <div class="name-num">
+                <div class="name">
+                    <div class="icon fa fa-user"></div>
+                    <div class="input"> <input type="text"  placeholder="Họ tên *"></div>
+                </div>
+                <div class="num">
+                    <div class="icon fa fa-phone"></div>
+                    <div class="input"> <input type="text"  placeholder="Di động *"></div>
+                </div>
+            </div>
+            
+            <div class="about">
+                <div class="infor" >
+                    <div class="icon fa fa-envelope"></div>
+                    <div class="input"> <input type="text"  placeholder="Email"></div>
+                </div>
+        
+                <div class="infor" >
+                    <div class="icon fa fa-pencil"></div>
+                    <div class="input"> <input type="text"  placeholder="Tiêu đề email"></div>
+                </div>
+        
+                <div class="infor" >
+                    <div class="icon fa fa-commenting-o"></div>
+                    <div class="input"><textarea name="noidung"  placeholder="Nội dung email..."></textarea></div>
+                </div>
+            </div>
+    
+            <button type="submit" class="registerbtn">GỬI ĐI</button>
+        </form>
+    </div>
+</body>
+</html>
